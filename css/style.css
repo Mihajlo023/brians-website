@@ -1,0 +1,330 @@
+/* primary color: #43A047 */
+/* for gradient? #80CBC4 */
+
+.col-md-6 {
+    margin: 1% auto 0;
+    width: 100%;
+}
+
+.col-md-6 .social-button {
+    margin: 20px auto;
+}
+
+.hr {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-top: 1px solid #ccccd1;
+    height: 1px;
+}
+.hr .hr-text {
+    background-color: #fff;
+    color: #99999e;
+    display: inline-block;
+    padding: 0 12px;
+    -webkit-transform: translateY(-60%);
+    transform: translateY(-60%);
+}
+.nav {
+    width: 100%;
+}
+
+.nav header.header {
+    width: 100%;
+    height: 0px;
+
+}
+
+.nav header.header nav {
+    width: 100%;
+}
+
+.nav header.header nav img {
+    display: inline-block;
+    height: 50px;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    margin-left: -70px
+}
+
+
+
+.carousel-inner {
+    height: 60vh;
+    
+    
+}
+
+.carousel-inner .item1  {
+    background:url('../img/sample-1.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    
+}
+.carousel-inner .item2  {
+    background:url('../img/sample-2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    
+}
+
+.carousel-inner .item3  {
+    background:url('../img/sample-3.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+
+
+#first-img {
+    position: relative;
+    min-height: 350px;
+    background: url("http://lewisking.net/images/header-image.jpg") no-repeat scroll 0px 100% / cover transparent;
+}
+
+
+/*--Index (feed page) starts here */
+
+li.dropdown {
+    position: absolute;
+    right: 20px;
+    margin-top: -7px;
+  }
+  li.dropdown div.dropdown-menu {
+    top: 55px;
+    left: -65px;
+    border-radius: 0 0 0 .25rem;
+  }
+  
+  .navbar .nav-item a img {
+    max-height: 40px;
+    padding-right: 5px;
+  }
+  
+  #feed {
+    padding: 54px 0 0 0;
+    height: 100%;
+  }
+  
+  
+  div.card {
+    padding: 10px;
+  }
+  
+  section.my-5 {
+    display: none;
+  }
+  
+  section.my-5 > .row {
+    margin-top: -50px;
+    height: 100%;
+  }
+  
+  section.my-5 > .row .card-body {
+    background-color: #f5f5f5;
+  }
+  
+  section.my-5 > .row .card-body .content {
+    display: inline-block;
+    line-height: 2em;
+    
+  }
+  
+  section.my-5 > .row img {
+    width: 50%;
+    max-width: 80px;
+    float: left;
+  }
+  section.my-5 > .row .content #name {
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  section.my-5 > .row .card {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  section.my-5 > .row .card li a {
+    padding: 10px;
+  }
+  .overlay {
+    z-index: 9999;
+    position: fixed;
+    left: 280px;
+    width: calc(100vw - 280px);
+    top: 0;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    display: none;
+  }
+  
+  
+  @media (max-width: 767px) {
+    .overlay {
+      display: initial;
+    }
+      #feed .row .col-md-3 {
+        display: none;
+      }
+      section.my-5 {
+          display: initial;
+      } 
+      
+      .navbar-collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+      }
+      .navbar-dark .navbar-nav .nav-link {
+        color: #333;
+      }
+      .navbar-dark .navbar-nav .active>.nav-link {
+        color: #383;
+        background-color: #dfd;
+      }
+      .navbar-dark .navbar-nav .nav-link:hover {
+        background-color: #dfd;
+        color:#555;
+      }
+      .navbar-collapse.collapsing {
+        height: 100vh;
+        -webkit-transition: left 0.1s ease;
+        -o-transition: left 0.1s ease;
+        -moz-transition: left 0.1s ease;
+        transition: left 0.1s ease;
+        left: -100%;
+      }
+      .navbar-collapse.show {
+        left: 0;
+        -webkit-transition: left 0.1s ease-in;
+        -o-transition: left 0.1s ease-in;
+        -moz-transition: left 0.1s ease-in;
+        transition: left 0.1s ease-in;
+      }
+      
+      .navbar > ul.navbar-nav li {
+        padding: 0 10px;
+        display: none;
+      }
+      .navbar > ul.navbar-nav li.active {
+        display: none;
+        display: initial;
+      }
+      .navbar-dark .navbar-nav .active>.nav-link {
+        background-color: initial;
+      }
+      
+    }
+
+    @media only screen and (max-width: 1024px) {
+      
+    }
+    
+    .navbar > ul.navbar-nav  {
+      flex-direction: initial;
+    }
+    
+    
+    
+    .overlay-darken {
+      animation: animation-overlay-darken;
+      animation-delay: 0.2s;
+      animation-fill-mode: forwards;
+    }
+    
+    .overlay-lighten {
+      animation: animation-overlay-lighten;
+      animation-delay: 0.1s;
+      animation-fill-mode: forwards;
+    }
+    
+    @keyframes animation-overlay-darken {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.3;
+      }
+    }
+    
+    @keyframes animation-overlay-lighten {
+      0% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  /*This is where the feed begins*/
+  #feed .row {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #feed .row .col-md-3 .position-fixed {
+    box-sizing: border-box;
+    height: 45vw;
+    padding: 10px 25px 10px 10px;;
+  }
+  #feed .row .col-md-6 {
+    height: 2000px;
+    padding: 10px 0 0 0;
+
+  }
+  
+  .feed-entry {
+    margin: 10px auto 20px;
+  }
+    .entry-header {
+      display: inline-flex;
+      margin: 2px 0;
+    }
+    .entry-header .post-name {
+      padding-left: 15px;
+      font-weight: 700;
+    }
+    .entry-header .timestamp {
+      font-size: 11px;
+      padding-left: 8px;
+      color: #666;
+    }
+  .avatar img {
+    max-width: 50px;
+  }
+  .entry-body {
+    padding: 4px;
+    margin-top: 4px;
+  }
+  .entry-body h4 {
+    font-size: 14px;
+  }
+  .entry-body p {
+    font-size: 12px;
+  }
+  .entry-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  
+  @media all and (max-width: 1024px) and (min-width: 768px) {
+    #feed .row .col-md-6 {
+      flex: 0 0 65% !important;
+      max-width: 65% !important;
+    }
+  }
+/*--Index ( feed page) ends here--*/  
