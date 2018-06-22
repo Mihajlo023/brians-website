@@ -1,5 +1,7 @@
 var overlayDark = false;
 
+// Init FB SDK
+
 $(document).ready(function () {
   // Navbar related functions
   $('.navbar-toggler').click(function() {  
