@@ -370,8 +370,12 @@ li.dropdown {
   padding-bottom: 3px; 
   margin-right: 10px;
 }
-.phone {
-  max-width:18%;
+.phone-3 {
+  width: 3ch;  
+}
+
+.phone-4 {
+  width: 4ch;  
 }
 
 #signup .md-form {
