@@ -120,64 +120,135 @@
             </div>
             <div class="modal-body">
                 <div class="row">	                
-                    <div class="form-horizontal">
+                    <form id="register-form" class="form-horizontal">
                         <p>Required:</p>
                         <div class="form-group md-form required">
                             <!-- <label class="control-label col-md-3">Required:</label> -->
                             
                             <div class="col-md-12">
-                                <input id="first_name" type="text" class="form-control" name="name" value="" placeholder="First Name" required>
+                                <input id="first_name" 
+                                    type="text" 
+                                    class="form-control" 
+                                    name="name" 
+                                    value="" 
+                                    placeholder="First Name"
+                                    oninvalid="setCustomValidity('Please Enter First Name')"
+                                    onchange="try{setCustomValidity('')}catch(e){}"
+                                    required>
                             </div>
                         </div>
                         <div class="form-group md-form required">
                             <!-- <label class="control-label col-md-3">Your Lastname *:</label> -->
                             <div class="col-md-12">
-                                <input id="last_name" type="text" class="form-control" name="last-name" value="" placeholder="Last Name" required>
+                                <input id="last_name" 
+                                    type="text" 
+                                    class="form-control" 
+                                    name="last-name" 
+                                    value="" 
+                                    placeholder="Last Name" 
+                                    oninvalid="setCustomValidity('Please Enter Last Name')"
+                                    onchange="try{setCustomValidity('')}catch(e){}"
+                                    required>
                             </div>
                         </div>
                         <div class="form-group md-form required">
                             <!-- <label class="control-label col-md-3">Email address *:</label> -->
                             <div class="col-md-12">
-                                <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address" required>
+                                <input id="email" 
+                                    type="email" 
+                                    class="form-control" 
+                                    name="email" 
+                                    value="" 
+                                    placeholder="Email Address" 
+                                    required>
                             </div>
                         </div>
                         <div class="form-group md-form required">
                             <!-- <label class="control-label col-md-3">Confirm your Email *:</label> -->
                             <div class="col-md-12">
-                                <input type="email" class="form-control" name="reemail" value="" placeholder="Verify Email" required>
+                                <input 
+                                    type="email" 
+                                    class="form-control" 
+                                    name="verify-email" 
+                                    value="" 
+                                    placeholder="Verify Email" 
+                                    required>
                             </div>
                         </div>				
                         <div class="form-group md-form required">
                             <!-- <label class="control-label col-md-3">Password *:</label> -->
                             <div class="col-md-12">
-                                <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password" required>
+                                <input id="password" 
+                                    type="password" 
+                                    class="form-control" 
+                                    name="password" 
+                                    value="" 
+                                    placeholder="Password" 
+                                    oninvalid="setCustomValidity(
+                                        `Passwords must be a minimum of 8 characters long and include 1 upper and lower case character, 
+                                        1 number and 1 special character.`
+                                    )"
+                                    onchange="try{setCustomValidity('')}catch(e){}"
+                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}"
+                                    required>
                             </div>
                         </div>	
                         <div class="form-group md-form required">
                             <!-- <label class="control-label col-md-3">Retype Password *:</label> -->
                             <div class="col-md-12">
-                                <input type="password" class="form-control" name="repassword" value="" placeholder="Verify Password" required>
+                                <input type="password" 
+                                    class="form-control" 
+                                    name="repassword" 
+                                    value="" 
+                                    placeholder="Verify Password" 
+                                    required>
                             </div>
                         </div>	                    
                         <div class="form-group md-form optional col-lg-8">      
                             <!-- <label class="control-label col-md-3">Your City:</label> -->                        
                             <p>Optional:</p>
                             <div class="col-md-12">                            
-                                <input id="city" type="text" class="form-control" name="city" value="" placeholder="City">
+                                <input id="city" 
+                                    type="text" 
+                                    class="form-control" 
+                                    name="city" 
+                                    value="" 
+                                    placeholder="City">
                             </div>
                         </div>
                         <div class="form-group md-form optional col-lg-3">
                             <!-- <label class="control-label col-md-3">Postal Code:</label> -->
                             <div class="col-md-12">
-                                <input id="postal_code" type="text" class="form-control" name="postal-code" value="" placeholder="Postal Code">
+                                <input id="postal_code" 
+                                type="text" 
+                                class="form-control" 
+                                name="postal-code" 
+                                value="" 
+                                placeholder="Postal Code">
                             </div>
                         </div>
                         <div class="form-group md-form">
                             <!-- <label class="control-label col-md-3">Phone Number:</label> -->
                             <div class="col-md-12">                            
-                                Phone: (<input id="phone_first_3" type="tel" name="phone-number" class="form-control d-inline-block phone-3" value="" maxlength="3">)
-                                <input id="phone_second_3" type="tel" name="phone-number" class="form-control d-inline-block phone-3" value=""  maxlength="3"> -
-                                <input id="phone_third_4"type="tel" name="phone-number" class="form-control d-inline-block phone-4" value=""  maxlength="4">                           
+                                <span>Phone: (</span>
+                                <input id="phone_first_3" 
+                                    type="tel" name="phone-number" 
+                                    class="form-control d-inline-block phone-3" 
+                                    value="" 
+                                    maxlength="3">
+                                <span>)</span>
+                                <input id="phone_second_3" 
+                                    type="tel" 
+                                    name="phone-number" 
+                                    class="form-control d-inline-block phone-3" 
+                                    value=""  
+                                    maxlength="3"> -
+                                <input id="phone_third_4" 
+                                    type="tel" 
+                                    name="phone-number" 
+                                    class="form-control d-inline-block phone-4" 
+                                    value=""  
+                                    maxlength="4">                           
                             </div>
                         </div>
                         
@@ -192,10 +263,11 @@
                         <div class="form-group">
                             <div class="col-md-3"></div>
                             <div class="col-md-12">
-                                <input id="register" type="submit" name="Signup Now" value="Register User" class="btn green"> 
+                                <input id="register" type="submit" name="Signup Now" value="Register User" class="btn green">
+                            
                             </div>	
                         </div>	                    
-                    </div>
+                    </form>
                 </div>
             </div>            
           </div>      

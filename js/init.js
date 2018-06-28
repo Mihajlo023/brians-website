@@ -10,4 +10,3 @@ var COGNITO_POOL_DATA = {
     ClientId : COGNITO_CLIENT_ID
 };
 Object.freeze(COGNITO_POOL_DATA);
-
