@@ -6,11 +6,6 @@ function validateUserData(callback) {
 
 }
 
-$("#register-form").submit(function(event) {
-    alert("Clicked");
-    event.preventDefault();    
-});
-
 function createUser() {
     console.log("hello");
     let attributeList = [];
@@ -42,25 +37,17 @@ function createUser() {
             return;
         }
         cognitoUser = result.user;
-    console.log('user name is ' + cognitoUser.getUsername());    
+        console.log('user name is ' + cognitoUser.getUsername());    
     });
 };
 
 
 
 // JQUERY
-/*
-$("#register").click(function() {
-    validateUserData(createUser());
+$("#register-form").submit(function(event) {    
+    //createUser();
+    $("#signup").modal("hide");
+    $("#verify").modal("show");
+    event.preventDefault();    
+    
 });
-*/
-/*
-userPool.signUp('brianwthomas@gmail.com', '!Passw0rd', attributeList, null, function(err, result){
-    if (err) {
-        alert(err);
-        return;
-    }
-    cognitoUser = result.user;
-    console.log('user name is ' + cognitoUser.getUsername());
-});
-*/

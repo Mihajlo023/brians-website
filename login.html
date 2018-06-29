@@ -134,8 +134,8 @@
                                     placeholder="First Name"
                                     oninvalid="setCustomValidity('Please Enter First Name')"
                                     onchange="try{setCustomValidity('')}catch(e){}"
-                                    required>
-                            </div>
+                                    >
+                            </div>                            
                         </div>
                         <div class="form-group md-form required">
                             <!-- <label class="control-label col-md-3">Your Lastname *:</label> -->
@@ -148,7 +148,7 @@
                                     placeholder="Last Name" 
                                     oninvalid="setCustomValidity('Please Enter Last Name')"
                                     onchange="try{setCustomValidity('')}catch(e){}"
-                                    required>
+                                    >
                             </div>
                         </div>
                         <div class="form-group md-form required">
@@ -160,7 +160,7 @@
                                     name="email" 
                                     value="" 
                                     placeholder="Email Address" 
-                                    required>
+                                    >
                             </div>
                         </div>
                         <div class="form-group md-form required">
@@ -172,7 +172,7 @@
                                     name="verify-email" 
                                     value="" 
                                     placeholder="Verify Email" 
-                                    required>
+                                    >
                             </div>
                         </div>				
                         <div class="form-group md-form required">
@@ -190,7 +190,7 @@
                                     )"
                                     onchange="try{setCustomValidity('')}catch(e){}"
                                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}"
-                                    required>
+                                    >
                             </div>
                         </div>	
                         <div class="form-group md-form required">
@@ -201,7 +201,7 @@
                                     name="repassword" 
                                     value="" 
                                     placeholder="Verify Password" 
-                                    required>
+                                    >
                             </div>
                         </div>	                    
                         <div class="form-group md-form optional col-lg-8">      
@@ -263,7 +263,7 @@
                         <div class="form-group">
                             <div class="col-md-3"></div>
                             <div class="col-md-12">
-                                <input id="register" type="submit" name="Signup Now" value="Register User" class="btn green">
+                                <input type="submit" name="Signup Now" value="Register User" class="btn green">
                             
                             </div>	
                         </div>	                    
@@ -274,6 +274,39 @@
         </div>
       </div>
 
+
+    <div id="verify" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+            <div class="modal-header d-block green">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3 class="text-center white-text">Verify Account</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group md-form">      
+                        <p>In order complete the account registration process, you will need to provide the 
+                            6 digit verification code that was sent to the email address you signed up with.</p>
+                        <div class="row justify-content-md-center">
+                            <div class="row">
+                        <div class="col-md-auto">
+                            Verification Code
+                            <input id="verification-code"
+                                type="number"                             
+                                class="form-control d-inline-block verification-code" 
+                                value=""  
+                                maxlength="6"
+                                required>     
+                            <input type="submit" value="Verify" class="btn green">  
+                        </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <a href="https://www.w3schools.com">Resend Verification Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- SCRIPTS -->
     
     <!-- JQuery -->

@@ -1,3 +1,17 @@
+/* GLOBAL CSS */
+
+input:valid {
+  background-color: pink;
+}
+
+input:required:invalid {
+  background-color: pink;
+}
+
+input:invalid {
+  background-color: pink;
+}
+
 /* primary color: #43A047 */
 /* for gradient? #80CBC4 */
 
@@ -370,12 +384,25 @@ li.dropdown {
   padding-bottom: 3px; 
   margin-right: 10px;
 }
+
+/* Login Phone Information */
 .phone-3 {
   width: 3ch;  
 }
 
 .phone-4 {
   width: 4ch;  
+}
+
+.verification-code {
+  width: 6ch;
+}
+
+.verification-code::-webkit-outer-spin-button,
+.verification-code::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 #signup .md-form {
