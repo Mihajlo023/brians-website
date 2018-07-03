@@ -16,26 +16,28 @@
 </head>
 
 <body>
-<nav class="navbar green navbar-expand-md navbar-dark fixed-top">  
+<nav class="navbar green navbar-expand-md navbar-dark fixed-top stroke">  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <ul class="navbar-nav mr-auto">
-    
     <li class="nav-item active">
-      <a class="nav-link" href="#"></i> Feed</a>
+      <a class="nav-link " href="#"></i> Feed</a>
     </li>            
     <li class="nav-item">
       <a class="nav-link" href="videos.html"></i> Videos</a>
-  </li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"></i> Gear</a>
+    </li>
   
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png" class="rounded-circle avatar-img" alt="avatar"></a>
     <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">My Profile</a>
+        <a class="dropdown-item" href="profile.html">My Profile</a>
         <a class="dropdown-item" href="#">Settings</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Log Out</a>
+        <a class="dropdown-item" href="login.html">Log Out</a>
     </div>
 </li>
 </ul>
@@ -56,8 +58,9 @@
               <!-- Heading-->
               <div class="card-body">
                 <div class="content">
-                  <img src="https://odesk-prod-portraits.s3.amazonaws.com/Users:d89dc2b9:PortraitUrl?AWSAccessKeyId=AKIAIKIUKM3HBSWUGCNQ&Expires=2147483647&Signature=WciEKKYVCbftSVk4CoM5o4RV2GI%3D&1528480393938606" class="rounded-circle avatar-img z-depth-1-half">
-                  
+                  <a href="profile.html">
+                    <img src="https://odesk-prod-portraits.s3.amazonaws.com/Users:d89dc2b9:PortraitUrl?AWSAccessKeyId=AKIAIKIUKM3HBSWUGCNQ&Expires=2147483647&Signature=WciEKKYVCbftSVk4CoM5o4RV2GI%3D&1528480393938606" class="rounded-circle avatar-img z-depth-1-half">
+                  </a>
                   <div class="profile-info">
                     <span id="name">Bryan Thomas</span>
                     <span id="location">Mapple Valley, WA
@@ -71,7 +74,10 @@
                 </li>  
               <li class="nav-item">
                 <a class="nav-link green-text" href="videos.html"><i class="fas fa-video"></i> Videos</a>
-              </li>    
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link green-text" href="#"><i class="fas fa-bicycle"></i> Gear</a>
+              </li>     
               
       
             </div>

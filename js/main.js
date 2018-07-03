@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.overlay').addClass('overlay-darken').removeClass('overlay-lighten');
     overlayDark = true;
   });
-  
+ 
   $('.overlay, .nav-link').click(function() {
     $('.navbar-collapse').collapse('hide');
     $('.overlay').addClass('overlay-lighten').removeClass('overlay-darken');
