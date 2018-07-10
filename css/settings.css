@@ -21,7 +21,7 @@ div.form-group {
 .desktop-form div.border-bottom:hover {
     background-color: #f5f5fa;
 }
-.desktop-form div.form-row:hover {
+.desktop-form div.profile-item:hover {
     cursor: pointer;
 }
 .desktop-form div.border-bottom i {
@@ -34,6 +34,7 @@ div.form-group {
 
 .form-row div.col-md-2 {
     position: relative;
+    top: 7px;
     right: 0px;
 }
 
