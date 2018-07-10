@@ -33,6 +33,8 @@ $(window).on('load', function() {
     $('.data-user-email').html(currentUser.getEmail()).append(editPencilIconHtml);
     $('#inputEmail').val(currentUser.getEmail());
     
+    $('.data-user-birthdate').html(currentUser.getBirthdate()).append(editPencilIconHtml);
+    $('#inputBirthdate').val(currentUser.getBirthdate());
     
 
 
@@ -100,11 +102,22 @@ $(window).on('load', function() {
     $(".profile-bday-save").click(function(event) {
         event.preventDefault();
         const parent = $(this).parents(".form-row");
-        const birthday = $("#inputBirthday").val();
-        const displayedBirthday = $(".profile-bday");
-        displayedBirthday.html(birthday).append(editPencilIconHtml);
+        const birthdate = $("#inputBirthdate").val();
+
+        var attributeList = [
+            {
+                Name : 'birthdate',
+                Value : birthdate
+            }
+        ];  
+
+        updateUserAttributes(attributeList);
+
+        const displayedBirthdate = $(".data-user-birthdate");
+        displayedBirthdate.html(birthdate).append(editPencilIconHtml);
         parent.children().first().removeClass("d-flex").addClass("d-none");
         parent.children().eq(1).removeClass("d-none");
+        console.log(birthdate);
     });
 
     $(".profile-address-save").click(function(event) {

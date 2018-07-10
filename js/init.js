@@ -16,6 +16,10 @@ function AppUser() {
     this.getEmail = function() { return this._email };
     this.setEmail = function(email) { this._email = email; };
 
+    this._birthdate = "";    
+    this.getBirthdate = function() { return this._birthdate };
+    this.setBirthdate = function(birthdate) { this._birthdate = birthdate; };
+
     this._accessToken = "";
     this.getAccessToken = function() { return this._accessToken };
     this.setAccessToken = function(accessToken) { this._accessToken = accessToken; };
@@ -33,8 +37,8 @@ function setUserInfo(cognitoUser) {
     });
     currentUser.setFirstName(tempAttributes.name);
     currentUser.setLastName(tempAttributes.family_name);
-    currentUser.setEmail(tempAttributes.email);
-    console.log(currentUser);
+    currentUser.setEmail(tempAttributes.email);    
+    currentUser.setBirthdate(tempAttributes.birthdate);    
 }
 
 
