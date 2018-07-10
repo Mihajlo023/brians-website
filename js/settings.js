@@ -20,16 +20,19 @@ function updateUserAttributes(attributeList) {
 }
 
 // jQuery functions
-$(function() {    
+
+
+$(window).on('load', function() {    
     const editPencilIconHtml = '<i class="fas fa-pencil-alt d-none"></i>';
     // set UserData
+    console.log(currentUser);
     $('.data-user-name-full').html(currentUser.getFullName()).append(editPencilIconHtml);
     $('#inputName').val(currentUser.getFirstName());
     $('#inputLastName').val(currentUser.getLastName());
     
     $('.data-user-email').html(currentUser.getEmail()).append(editPencilIconHtml);
     $('#inputEmail').val(currentUser.getEmail());
-    console.log(currentUser.getEmail());
+    
     
 
 

@@ -26,6 +26,16 @@ var currentUser = new AppUser();
 const CLIENT_ID = '1rk639l7gs6uhkmv05lg2g16ue';
 const USER_POOL_ID = 'us-west-2_AVgJdWIlj';
 
+function setUserInfo(cognitoUser) {
+    let tempAttributes = {};
+    cognitoUser.UserAttributes.forEach(function(attribute) {
+        tempAttributes[attribute.Name] = attribute.Value;
+    });
+    currentUser.setFirstName(tempAttributes.name);
+    currentUser.setLastName(tempAttributes.family_name);
+    currentUser.setEmail(tempAttributes.email);
+    console.log(currentUser);
+}
 
 
 function initCognitoSDK() {
@@ -33,7 +43,7 @@ function initCognitoSDK() {
         ClientId : CLIENT_ID,
         AppWebDomain : 'login.mygear.bike', 
         TokenScopesArray : ['email', 'openid', 'aws.cognito.sign.user.admin', 'profile'],
-        RedirectUriSignIn : 'https://mygear.bike/login_redirect.html',
+        RedirectUriSignIn : 'https://mygear.bike/login',
         RedirectUriSignOut : 'https://mygear.bike/login',
         IdentityProvider : ['COGNITO', 'Facebook'], 
         UserPoolId : USER_POOL_ID, 
@@ -43,18 +53,15 @@ function initCognitoSDK() {
     var auth = new AmazonCognitoIdentity.CognitoAuth(authData);    
     auth.userhandler = {
         onSuccess: function(result) { 
-            //window.location.replace("https://mygear.bike/");            
-            console.log("success");
+            //window.location.replace("https://mygear.bike/");                        
             currentUser.setAccessToken(result.accessToken.getJwtToken());
             cognitoidentityserviceprovider.getUser({AccessToken: currentUser.getAccessToken()}, function(err, data) {
                 if (err) console.log(err);
                 else {
-                    setUserAttributes(data);
-                    
+                    setUserInfo(data);                    
                     //console.log(data);
                 }
-            });
-            console.log(result);
+            });            
         },
         onFailure: function(err) {
             alert("Error signing in.\nError Message: " + err);
@@ -72,16 +79,6 @@ if (window.location.hostname === "mygear.bike")
     auth.getSession();
 
 
-function setUserAttributes(cognitoUser) {
-    let tempAttributes = {};
-    cognitoUser.UserAttributes.forEach(function(attribute) {
-        tempAttributes[attribute.Name] = attribute.Value;
-    });
-    currentUser.setFirstName(tempAttributes.name);
-    currentUser.setLastName(tempAttributes.family_name);
-    currentUser.setEmail(tempAttributes.email);
-    console.log(currentUser);
-}
 
 // Capture code query string
 // make auth request, redirect if success, else return error.
