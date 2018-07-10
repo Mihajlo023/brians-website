@@ -1,6 +1,37 @@
+function updateUserAttributes(attributeList) {
+    if (window.location.hostname === "mygear.bike") {           
+        // refreshAccessToken
+        auth.getSession();
 
+        var params = {
+            AccessToken: currentUser.getAccessToken(),
+            UserAttributes: attributeList
+        }
+
+        cognitoidentityserviceprovider.updateUserAttributes(params, function(err, data) {
+            if (err) console.log(err);
+            else {
+                console.log(data);
+                
+                //console.log(data);
+            }
+        });
+    }
+}
+
+// jQuery functions
 $(function() {    
     const editPencilIconHtml = '<i class="fas fa-pencil-alt d-none"></i>';
+    // set UserData
+    $('.data-user-name-full').html(currentUser.getFullName()).append(editPencilIconHtml);
+    $('#inputName').val(currentUser.getFirstName());
+    $('#inputLastName').val(currentUser.getLastName());
+    
+    $('.data-user-email').html(currentUser.getEmail()).append(editPencilIconHtml);
+    $('#inputEmail').val(currentUser.getEmail());
+    console.log(currentUser.getEmail());
+    
+
 
     $(".profile-item").click(function(event) {
         if(event.target.nodeName != "BUTTON") {
@@ -16,18 +47,53 @@ $(function() {
         parent.children().eq(1).removeClass("d-none");
     });
 
-    $(".profile-name-save").click(function(event){
-        event.preventDefault();
-        const parent = $(this).parents(".form-row");
+    $(".profile-name-save").click(function(event){        
         const firstName = $("#inputName").val();
         const lastName = $("#inputLastName").val();
-        const displayedName = $(".profile-name");
+
+        var attributeList = [
+            {
+                Name : 'name',
+                Value : firstName
+            },
+            {
+                Name : 'family_name',
+                Value : lastName
+            }
+        ];            
+
+        updateUserAttributes(attributeList);
+        
+        event.preventDefault();
+        const parent = $(this).parents(".form-row");
+        const displayedName = $(".data-user-name-full");
 
         displayedName.html(firstName + " " + lastName).append(editPencilIconHtml);     
         parent.children().first().removeClass("d-flex").addClass("d-none");
         parent.children().eq(1).removeClass("d-none");
     });
 
+    $(".profile-email-save").click(function(event){
+        event.preventDefault();
+        const parent = $(this).parents(".form-row");        
+        const email = $("#inputEmail").val();
+
+        var attributeList = [
+            {
+                Name : 'email',
+                Value : email
+            }
+        ];  
+
+        updateUserAttributes(attributeList);
+
+        const displayedName = $(".data-user-email");
+
+        displayedName.html(email).append(editPencilIconHtml);     
+        parent.children().first().removeClass("d-flex").addClass("d-none");
+        parent.children().eq(1).removeClass("d-none");
+    });
+    
     $(".profile-bday-save").click(function(event) {
         event.preventDefault();
         const parent = $(this).parents(".form-row");
@@ -60,5 +126,6 @@ $(function() {
         parent.children().first().removeClass("d-flex").addClass("d-none");
         parent.children().eq(1).removeClass("d-none");
     });
+    
 });
 
