@@ -1,3 +1,4 @@
+
 function edit() {
     let editInput = event.target.parentNode.children[0];
     event.target.classList.add("d-none");
@@ -5,16 +6,26 @@ function edit() {
     editInput.classList.add("d-flex");
 }
 
-function updateProfile() {
-    event.preventDefault();
-    let profileDataTarget = event.target.parentNode.parentNode.parentNode.children[1];
-    let firstNameValue = event.target.parentNode.parentNode.children[0].children[0].value;
-    let lastNameValue = event.target.parentNode.parentNode.children[1].children[0].value;
-    profileDataTarget.innerHTML = firstNameValue + " " + lastNameValue;
 
-    event.target.parentNode.parentNode.parentNode.children[0].classList.add("d-none");
-    event.target.parentNode.parentNode.parentNode.children[0].classList.remove("d-flex");
-    event.target.parentNode.parentNode.parentNode.children[1].classList.remove("d-none");
-}
+$(function() {    
+    $(".profile-name-save").click(function(event){
+        event.preventDefault();
+        const parent = $(this).parents(".form-row");
+        const firstName = $("#inputName").val();
+        const lastName = $("#inputLastName").val();
+        const displayedName = $(".profile-name");
 
+        displayedName.html(firstName + " " + lastName);      
+        parent.children().first().removeClass("d-flex").addClass("d-none");
+        parent.children().eq(1).removeClass("d-none");
+        $(".desktop-form div.border-bottom:hover i").css("display: initial;");
+    });
+
+    $(".profile-bday-save").click(function(event) {
+        event.preventDefault();
+        const parent = $(this).parents(".form-row");
+        const birthday = $("#inputBirthday").val();
+        console.log(birthday);
+    });
+});
 
