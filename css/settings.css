@@ -38,6 +38,20 @@ div.form-group {
     right: 0px;
 }
 
+button.close {
+    font-size: 32px;
+    margin-left: 16px;
+}
+
+span.img-span {
+    position: relative;
+    top: -50px !important;
+}
+#profile-picture {
+    margin: 20px 0px;
+    width: 120px;
+    height: 120px;
+}
 .desktop-form span.combodate select {
     display: inline-flex;
     width: 100%;
