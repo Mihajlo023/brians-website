@@ -23,7 +23,7 @@ $(function() {
         const lastName = $("#inputLastName").val();
         const displayedName = $(".profile-name");
 
-        displayedName.html(firstName + " " + lastName).append(editPencilIconHtml);     
+        displayedName.html("<strong>" + firstName + " " + lastName + "</strong>").append(editPencilIconHtml);     
         parent.children().first().removeClass("d-flex").addClass("d-none");
         parent.children().eq(1).removeClass("d-none");
     });
@@ -33,7 +33,7 @@ $(function() {
         const parent = $(this).parents(".form-row");
         const birthday = $("#inputBirthday").val();
         const displayedBirthday = $(".profile-bday");
-        displayedBirthday.html(birthday).append(editPencilIconHtml);
+        displayedBirthday.html("<strong>" + birthday + "</strong>").append(editPencilIconHtml);
         parent.children().first().removeClass("d-flex").addClass("d-none");
         parent.children().eq(1).removeClass("d-none");
     });
@@ -45,7 +45,7 @@ $(function() {
         const postalCode = $("#inputPostalCode").val();
         const displayedAddress = $(".profile-address");
 
-        displayedAddress.html(city + ", " + postalCode).append(editPencilIconHtml);
+        displayedAddress.html("<strong>" + city + ", " + postalCode + "</strong>").append(editPencilIconHtml);
         parent.children().first().removeClass("d-flex").addClass("d-none");
         parent.children().eq(1).removeClass("d-none");
     });
@@ -56,7 +56,7 @@ $(function() {
         const phone = $("#inputPhone").val();
         const displayedPhone = $(".profile-phone");
 
-        displayedPhone.html(phone).append(editPencilIconHtml);;
+        displayedPhone.html("<strong>" + phone + "</strong>").append(editPencilIconHtml);;
         parent.children().first().removeClass("d-flex").addClass("d-none");
         parent.children().eq(1).removeClass("d-none");
     });

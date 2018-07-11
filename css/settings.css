@@ -18,20 +18,35 @@ div.border-bottom span {
 div.form-group {
     top: 10px;
 }
-.desktop-form div.border-bottom:hover {
-    background-color: #f5f5fa;
-}
 .desktop-form div.profile-item:hover {
+    background-color: #f5f5fa;
     cursor: pointer;
 }
+
 .desktop-form div.border-bottom i {
     margin-left: 16px;
     color: #aaa;
 }
+
 .desktop-form div.border-bottom:hover i {
     display: inline-block !important;
 }
-
+h1 {
+    margin-bottom: 30px;
+    margin-top: -25px;
+}
+.desktop-form div.border-bottom i.fa-plus-circle {
+    position: absolute;
+    top: 120px;
+    left: 90px;
+    color: #cdcdcd;
+    font-size: 21px;
+    opacity: 0.75;
+}
+.desktop-form div.border-bottom i.fa-plus-circle:hover {
+    opacity: 1;
+    cursor: pointer;
+}
 .form-row div.col-md-2 {
     position: relative;
     top: 7px;
@@ -45,10 +60,10 @@ button.close {
 
 span.img-span {
     position: relative;
-    top: -50px !important;
+    top: -66px !important;
 }
 #profile-picture {
-    margin: 20px 0px;
+    margin: 20px 0px 40px;
     width: 120px;
     height: 120px;
 }
@@ -81,12 +96,45 @@ span.img-span {
     box-sizing: content-box;
     background-color: transparent;
     color: #999;
+    margin-right: 10px;
+}
+a.plain-link {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    font-size: 14px;
+}
+a.done-button {
+    position: absolute;
+    z-index: 10000;
+    top: -90px;
+    right: -8px;
+    color: #fff;
+    font-weight: bolder;
+    padding: 8px;
+}
+a.done-button:hover {
+    background-color: rgba(255,255,255,.1);
 }
 
 
 @media (max-width: 767px) {
     .desktop-form, .settings-sidebar, div.position-fixed {
         display: none;
+    }
+    .mobile-form {
+        width: 100% !important;
+    }
+    .p-0 {
+        left: 12px;
+    }
+    .md-form {
+        margin-top: 0px !important;
+    }
+    .mobile-form .avatar-img {
+        margin: -10px auto 10px;
+        width: 120px;
+        height: 120px;
     }
 }
 
