@@ -102,11 +102,7 @@ $(window).on('load', function() {
     $(".profile-bday-save").click(function(event) {
         event.preventDefault();
         const parent = $(this).parents(".form-row");
-<<<<<<< HEAD
-        const birthday = $("#inputBirthday").val();
-        const displayedBirthday = $(".profile-bday");
-        displayedBirthday.html("<strong>" + birthday + "</strong>").append(editPencilIconHtml);
-=======
+
         const birthdate = $("#inputBirthdate").val();
 
         var attributeList = [
@@ -115,12 +111,11 @@ $(window).on('load', function() {
                 Value : birthdate
             }
         ];  
-
+        
         updateUserAttributes(attributeList);
 
         const displayedBirthdate = $(".data-user-birthdate");
         displayedBirthdate.html(birthdate).append(editPencilIconHtml);
->>>>>>> f76e2c6ac8f51b1bad12dd470dbe58e85c838271
         parent.children().first().removeClass("d-flex").addClass("d-none");
         parent.children().eq(1).removeClass("d-none");
         console.log(birthdate);

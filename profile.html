@@ -12,80 +12,9 @@
   </head>
 
 <body class="profile-page">
-  <nav class="navbar green navbar-expand-md navbar-dark fixed-top stroke">  
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <ul class="navbar-nav mr-auto">
-      
-      <li class="nav-item active">
-        <a class="nav-link" href="#"></i> Profile</a>
-      </li>            
-      <li class="nav-item">
-        <a class="nav-link" href="index.html"></i> Feed</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="videos.html"></i> Videos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"></i> Gear</a>
-      </li>
-    
-    <li class="nav-item editprofile">
-      <a class="nav-link lead" href="settings.html"><i class="fas fa-user-edit"></i></a>
-    </li>
-    </ul>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto ">
-            <!-- Section: Social news card -->
-          <section class="my-5">
+    <div id="nav-placeholder"></div>
 
-            <!-- Grid row -->
-            <div class="row">
-          
-              <!-- Grid column -->
-              <div class="col-md-6 col-lg-4">
-          
-                <!-- Card -->
-                <div class="card ">
-          
-                  <!-- Heading-->
-                  <div class="card-body">
-                    <div class="content">
-                      <img src="https://odesk-prod-portraits.s3.amazonaws.com/Users:d89dc2b9:PortraitUrl?AWSAccessKeyId=AKIAIKIUKM3HBSWUGCNQ&Expires=2147483647&Signature=WciEKKYVCbftSVk4CoM5o4RV2GI%3D&1528480393938606" class="rounded-circle avatar-img z-depth-1-half">
-                      
-                      <div class="profile-info">
-                        <span id="name">Bryan Thomas</span>
-                        <span id="location">Mapple Valley, WA
-                          <i class="fas fa-map-marker-alt"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <li class="nav-item active">
-                      <a class="nav-link green-text" href="index.html"><i class="fas fa-comments"></i> Feed</a>
-                    </li>  
-                  <li class="nav-item">
-                    <a class="nav-link green-text" href="videos.html"><i class="fas fa-video"></i> Videos</a>
-                  </li>    
-                
-        
-                </div>
-                <!-- Card -->
-        
-            </div>
-            <!-- Grid column -->
-        
-          </div>
-          <!-- Grid row -->
-        
-        </section>
-        <!-- Section: Social news card -->
-
-              
-      </ul>    
-    </div>  
-  </nav><div class="overlay" style="height: 100vh;"></div>
+  <div class="overlay" style="height: 100vh;"></div>
     <div class="container-fluid" id="profile">
       <div class="details green lighten-4">
         <div class="profile-data col-md-5">
@@ -113,5 +42,10 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/brian.js"></script>
+<script>
+  $(function(){
+    $("#nav-placeholder").load("nav.html");
+  });
+</script>
 </body>
 </html>
