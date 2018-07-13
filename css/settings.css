@@ -55,6 +55,14 @@ h1 {
     color: #ced4da;
     z-index: -1;
 }
+.mobile-form i.fa-user {
+    position: absolute;
+    font-size: 100px;
+    top: -5px;
+    left: calc(50% - 40px);
+    color: #ced4da;
+    z-index: -1;
+}
 
 .form-row div.col-md-2 {
     position: relative;
