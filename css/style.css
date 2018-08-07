@@ -1,5 +1,4 @@
 .overlay {
-  z-index: 9999;
   position: fixed;
   left: 280px;
   width: calc(100vw - 280px);
@@ -312,3 +311,6 @@ input::-webkit-inner-spin-button {
 }
 
 
+.search-form {
+  margin-bottom: 10px;
+}

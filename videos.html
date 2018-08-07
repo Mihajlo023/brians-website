@@ -10,14 +10,177 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/mdb.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
+    <link href="scss/style.css" rel="stylesheet">
     <script src "js/init.js"></script>
 </head>
 
 <body>
-        <div id="nav-placeholder"></div>
+    <div id="nav-placeholder"></div>
     <div class="overlay" style="height: 100vh;"></div>
 
+    <div class="container-fluid">
+       
+        <div class="row">
+            <aside class="col-md-3"><div class="col-md-3 position-fixed"><h2>Why do we use it?</h2><p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions..</p></div></aside>
+            <!-- main content on video page -->
+            <div class="video-page-container col-md-6">
+                    <form class="form-inline mr-auto search-form">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">Search</button>
+                    </form>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4">
+                                <!--Modal: Name-->
+                        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4>Title of the video</h4>
+                                        <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                                            &times;
+                                        </button>
+                                    </div>
+                                    <!-- modal body -->
+                                    <div class="modal-body mb-0 p-0">
+                                        
+                                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hg6s596PPRY" allowfullscreen="true" allowfullscreen="webkitallowfullscreen mozallowfullscreen allowfullscreen"></iframe>
+                                        </div>
+                
+                                    </div>
+                                    <!-- modal body END -->
+                                    <!--Footer-->
+                                        <div class="modal-footer">
+                                            <span class="mr-4">This video shows us how we can quickly replace back tire...</span>
+                                            <label class="tag">Tag1</label>
+                                            <label class="tag">Tag2</label>
+                                            <label class="tag">Tag3</label>
+                                        </div>
+                                    <!--Footer END-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--Modal: Name-->
+                        <div class="video-thumbnail">
+                            <a><img class="img-fluid z-depth-1" src="https://img.youtube.com/vi/hg6s596PPRY/mqdefault.jpg" alt="video" data-toggle="modal" data-target="#modal1"></a>
+                        </div>    
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 mb-4">
+                                <!--Modal: Name-->
+                        <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4>Title of the video</h4>
+                                        <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                                            &times;
+                                        </button>
+                                    </div>
+                                    <!-- modal body -->
+                                    <div class="modal-body mb-0 p-0">
+                
+                                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Q2sKMqB9QCg" allowfullscreen="true" allowfullscreen="allowfullscreen"></iframe>
+                                        </div>
+                
+                                    </div>
+                                    <!-- modal body END -->
+                                    <!--Footer-->
+                                        <div class="modal-footer">
+                                            <span class="mr-4">This video shows us how we can quickly replace inner tube...</span>
+                                            <label class="tag">Tag1</label>
+                                            <label class="tag">Tag2</label>
+                                            <label class="tag">Tag3</label>
+                                        </div>
+                                    <!--Footer END-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--Modal: Name-->
+                        <div class="video-thumbnail">
+                            <a><img class="img-fluid z-depth-1" src="https://img.youtube.com/vi/Q2sKMqB9QCg/mqdefault.jpg" alt="video" data-toggle="modal" data-target="#modal2"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                            <!--Modal: Name-->
+                        <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4>Title of the video</h4>
+                                        <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                                            &times;
+                                        </button>
+                                    </div>
+                                    <!-- modal body -->
+                                    <div class="modal-body mb-0 p-0">
+                
+                                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VB4aggLTSYI" allowfullscreen="true" allowfullscreen="allowfullscreen"></iframe>
+                                        </div>
+                
+                                    </div>
+                                    <!-- modal body END -->
+                                    <!--Footer-->
+                                        <div class="modal-footer">
+                                            <span class="mr-4">This video shows us how we can quickly replace back tire...</span>
+                                            <label class="tag">Tag1</label>
+                                            <label class="tag">Tag2</label>
+                                            <label class="tag">Tag3</label>
+                                        </div>
+                                    <!--Footer END-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--Modal: Name-->
+                        <div class="video-thumbnail">
+                            <a><img class="img-fluid z-depth-1" src="https://img.youtube.com/vi/VB4aggLTSYI/mqdefault.jpg" alt="video" data-toggle="modal" data-target="#modal3"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <!--Modal: Name-->
+                        <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4>Title of the video</h4>
+                                        <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                                            &times;
+                                        </button>
+                                    </div>
+                                    <!-- modal body -->
+                                    <div class="modal-body mb-0 p-0">
+                
+                                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JG06ooQBIx8" allowfullscreen="true" allowfullscreen="allowfullscreen"></iframe>
+                                        </div>
+                
+                                    </div>
+                                    <!-- modal body END -->
+                                    <!--Footer-->
+                                        <div class="modal-footer">
+                                            <span class="mr-4">This video shows us how we can quickly replace back tire...</span>
+                                            <label class="tag">Tag1</label>
+                                            <label class="tag">Tag2</label>
+                                            <label class="tag">Tag3</label>
+                                        </div>
+                                    <!--Footer END-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--Modal: Name-->
+                        <div class="video-thumbnail">
+                            <a><img class="img-fluid z-depth-1" src="https://img.youtube.com/vi/JG06ooQBIx8/mqdefault.jpg" alt="video" data-toggle="modal" data-target="#modal4"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main content on video page END -->
+            <aside class="col-md-3"><div class="col-md-3 position-fixed">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div></aside>
+            
+        </div>    
+    </div>
     
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -30,3 +193,4 @@
     </script>
 </body>
 </html>
+
